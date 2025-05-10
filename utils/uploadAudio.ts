@@ -30,6 +30,9 @@ export const uploadAudio = async (audioBlob: Blob): Promise<SongInfo | null> => 
         name: typeof artistData === 'string' ? artistData : artistData?.name ?? 'Unknown Artist',
       };
 
+
+// Using ?? (nullish coalescing operator) to handle possible null or undefined values from the API
+
       const songInfo: SongInfo = {
         title: result.title,
         album: result.album ?? '',
